@@ -258,7 +258,7 @@ def montar_evento(jogo: dict, ano_consulta: int) -> dict:
         "uid": f"jogo-{jogo['id']}@{DOMINIO_UID}",
         "data": data,
         "inicio": inicio,
-        "resumo": f"[{competicao}] {confronto}",
+        "resumo": f"⚽ {confronto} [{competicao}]",
         "local": estadio,
         "descricao": "\n".join(linhas),
         "rodada": rodada,

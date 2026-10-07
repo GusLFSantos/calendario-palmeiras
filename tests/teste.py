@@ -61,7 +61,7 @@ checar("semifinal da Libertadores (ida)", inicio_utc(por_uid(out, "5250")), "202
 checar("semifinal da Libertadores (volta)", inicio_utc(por_uid(out, "5249")), "20261022T003000Z")
 checar("Brasileirão 21h30", inicio_utc(por_uid(out, "4691")), "20261009T003000Z")
 checar("resumo com placar quando o jogo acabou",
-       por_uid(out, "4600")["resumo"], "[Brasileirão] Palmeiras 2 x 1 Grêmio")
+       por_uid(out, "4600")["resumo"], "⚽ Palmeiras 2 x 1 Grêmio [Brasileirão]")
 checar("UID vem do id da API", por_uid(out, "4691")["uid"],
        f"jogo-4691@{g.DOMINIO_UID}")
 
