@@ -1,0 +1,40 @@
+name: Atualizar calendário
+
+on:
+  schedule:
+    # 06:23 e 18:23 de Brasília (minuto fora da hora cheia de propósito:
+    # o agendador do GitHub atrasa quando todo mundo marca :00)
+    - cron: "23 9,21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-calendario
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar o .ics
+        run: python scripts/gerar_ics.py
+
+      - name: Commitar se mudou
+        run: |
+          if [ -z "$(git status --porcelain docs)" ]; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "calendário: atualização automática"
+          git push

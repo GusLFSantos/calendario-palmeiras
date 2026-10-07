@@ -1,0 +1,139 @@
+{
+  "_nota": "Registros reais da API, escolhidos para exercitar os casos difíceis: jogo fora do Brasil com hora_alt, jogo fora do Brasil sem hora_alt, horário a definir (00H00), TV com HTML, estádio nulo.",
+  "meses": [
+    {
+      "ano": 2026,
+      "mes": 4,
+      "jogos": [
+        {
+          "id": "4902",
+          "time_casa": "Junior Barranquilla-COL",
+          "time_visitante": "Palmeiras",
+          "data_jogo": "08/04",
+          "hora": "19H30",
+          "hora1": "19:30",
+          "hora_alt": "21H30",
+          "estadio": "Olímpico Jaime Morón León",
+          "campeonato": "Libertadores 2026",
+          "rodada": "1ª rodada",
+          "excecao": "<b>Globo/getv e ESPN/Disney+</b>",
+          "placar_casa": "1",
+          "placar_visitante": "1"
+        }
+      ]
+    },
+    {
+      "ano": 2026,
+      "mes": 5,
+      "jogos": [
+        {
+          "id": "4831",
+          "time_casa": "Sporting Cristal-PER",
+          "time_visitante": "Palmeiras",
+          "data_jogo": "05/05",
+          "hora": "17H00",
+          "hora1": "17:00",
+          "hora_alt": "19H00",
+          "estadio": "Alejandro Villanueva",
+          "campeonato": "Libertadores 2026",
+          "rodada": "4ª rodada",
+          "excecao": "<b>Paramount+</b>",
+          "placar_casa": "0",
+          "placar_visitante": "2"
+        }
+      ]
+    },
+    {
+      "ano": 2026,
+      "mes": 9,
+      "jogos": [
+        {
+          "id": "5147",
+          "time_casa": "LDU-EQU",
+          "time_visitante": "Palmeiras",
+          "data_jogo": "16/09",
+          "hora": "17H00",
+          "hora1": "17:00",
+          "hora_alt": "",
+          "estadio": "Estádio Rodrigo Paz Delgado",
+          "campeonato": "Libertadores 2026",
+          "rodada": "Quartas de final",
+          "excecao": "Paramount+",
+          "placar_casa": "3",
+          "placar_visitante": "2"
+        },
+        {
+          "id": "5148",
+          "time_casa": "Palmeiras",
+          "time_visitante": "LDU-EQU",
+          "data_jogo": "09/09",
+          "hora": "19H00",
+          "hora1": "19:00",
+          "hora_alt": "",
+          "estadio": "Nubank Parque",
+          "campeonato": "Libertadores 2026",
+          "rodada": "Quartas de final",
+          "excecao": "Paramount+",
+          "placar_casa": "1",
+          "placar_visitante": "0"
+        }
+      ]
+    },
+    {
+      "ano": 2026,
+      "mes": 11,
+      "jogos": [
+        {
+          "id": "4697",
+          "time_casa": "Cruzeiro",
+          "time_visitante": "Palmeiras",
+          "data_jogo": "18/11",
+          "hora": "00H00",
+          "hora1": "00:00",
+          "hora_alt": "",
+          "estadio": "Mineirão",
+          "campeonato": "Brasileirão Série A 2026",
+          "rodada": "35ª rodada",
+          "excecao": "",
+          "placar_casa": "",
+          "placar_visitante": ""
+        },
+        {
+          "id": "4699",
+          "time_casa": "Chapecoense",
+          "time_visitante": "Palmeiras",
+          "data_jogo": "28/11",
+          "hora": "00H00",
+          "hora1": "00:00",
+          "hora_alt": "",
+          "estadio": null,
+          "campeonato": "Brasileirão Série A 2026",
+          "rodada": "37ª rodada",
+          "excecao": "",
+          "placar_casa": "",
+          "placar_visitante": ""
+        },
+        {
+          "id": "5237",
+          "time_casa": "Palmeiras",
+          "time_visitante": "Vasco da Gama",
+          "data_jogo": "01/11",
+          "hora": "16H00",
+          "hora1": "16:00",
+          "hora_alt": "",
+          "estadio": "Nubank Parque",
+          "campeonato": "Copa do Brasil",
+          "rodada": "Semifinal",
+          "excecao": "",
+          "placar_casa": "",
+          "placar_visitante": ""
+        }
+      ]
+    },
+    {
+      "ano": 2027,
+      "mes": 1,
+      "jogos": []
+    }
+  ]
+}
