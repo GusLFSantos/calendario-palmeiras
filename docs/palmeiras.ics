@@ -12,11 +12,11 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:jogo-5070@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260802T190000Z
 DTEND:20260802T210000Z
-SUMMARY:[Copa do Brasil] Palmeiras 3 x 0 Fortaleza
+SUMMARY:⚽ Palmeiras 3 x 0 Fortaleza [Copa do Brasil]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Copa do Brasil\nFase: Oitavas de final\nEstádio:
   Nubank Parque\nTransmissão: Globo\, SporTV\, Premiere e Amazon Prime\nFo
@@ -24,11 +24,11 @@ DESCRIPTION:Competição: Copa do Brasil\nFase: Oitavas de final\nEstádio:
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5069@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260805T233000Z
 DTEND:20260806T013000Z
-SUMMARY:[Copa do Brasil] Fortaleza 3 x 2 Palmeiras
+SUMMARY:⚽ Fortaleza 3 x 2 Palmeiras [Copa do Brasil]
 LOCATION:Arena Pantanal
 DESCRIPTION:Competição: Copa do Brasil\nFase: Oitavas de final\nEstádio:
   Arena Pantanal\nTransmissão: Globo\, SporTV\, Premiere e Amazon Prime\nF
@@ -36,11 +36,11 @@ DESCRIPTION:Competição: Copa do Brasil\nFase: Oitavas de final\nEstádio:
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4684@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260809T190000Z
 DTEND:20260809T210000Z
-SUMMARY:[Brasileirão] Palmeiras 0 x 0 Internacional
+SUMMARY:⚽ Palmeiras 0 x 0 Internacional [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 22ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Globo e Premiere\nFonte: https://www.
@@ -48,11 +48,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 22ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5072@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260812T220000Z
 DTEND:20260813T000000Z
-SUMMARY:[Libertadores] Palmeiras 1 x 1 Cerro Porteño-PAR
+SUMMARY:⚽ Palmeiras 1 x 1 Cerro Porteño-PAR [Libertadores]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Libertadores 2026\nFase: Oitavas de final\nEstád
  io: Nubank Parque\nTransmissão: Paramount+\nFonte: https://www.palmeiras.
@@ -60,11 +60,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Oitavas de final\nEstád
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4685@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260815T193000Z
 DTEND:20260815T213000Z
-SUMMARY:[Brasileirão] Fluminense 3 x 2 Palmeiras
+SUMMARY:⚽ Fluminense 3 x 2 Palmeiras [Brasileirão]
 LOCATION:Maracanã
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 23ª rodada\nEs
  tádio: Maracanã\nTransmissão: Premiere\nFonte: https://www.palmeiras.co
@@ -72,11 +72,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 23ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5071@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260819T220000Z
 DTEND:20260820T000000Z
-SUMMARY:[Libertadores] Cerro Porteño-PAR 0 x 1 Palmeiras
+SUMMARY:⚽ Cerro Porteño-PAR 0 x 1 Palmeiras [Libertadores]
 LOCATION:Nueva Olla
 DESCRIPTION:Competição: Libertadores 2026\nFase: Oitavas de final\nEstád
  io: Nueva Olla\nTransmissão: Paramount+\nFonte: https://www.palmeiras.com
@@ -84,11 +84,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Oitavas de final\nEstád
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4686@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260823T190000Z
 DTEND:20260823T210000Z
-SUMMARY:[Brasileirão] Palmeiras 4 x 1 Vasco da Gama
+SUMMARY:⚽ Palmeiras 4 x 1 Vasco da Gama [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 24ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Globo e Premiere\nFonte: https://www.
@@ -96,11 +96,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 24ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5126@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260827T003000Z
 DTEND:20260827T023000Z
-SUMMARY:[Copa do Brasil] Palmeiras 3 x 0 Santos
+SUMMARY:⚽ Palmeiras 3 x 0 Santos [Copa do Brasil]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Copa do Brasil\nFase: Quartas de final\nEstádio:
   Nubank Parque\nTransmissão: Globo\, SporTV\, Premiere e Amazon Prime\nFo
@@ -108,11 +108,11 @@ DESCRIPTION:Competição: Copa do Brasil\nFase: Quartas de final\nEstádio:
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4687@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260830T213000Z
 DTEND:20260830T233000Z
-SUMMARY:[Brasileirão] Mirassol 1 x 1 Palmeiras
+SUMMARY:⚽ Mirassol 1 x 1 Palmeiras [Brasileirão]
 LOCATION:Estádio Campos Maia
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 25ª rodada\nEs
  tádio: Estádio Campos Maia\nTransmissão: Amazon Prime\nFonte: https://w
@@ -120,11 +120,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 25ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5125@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260903T003000Z
 DTEND:20260903T023000Z
-SUMMARY:[Copa do Brasil] Santos 0 x 0 Palmeiras
+SUMMARY:⚽ Santos 0 x 0 Palmeiras [Copa do Brasil]
 LOCATION:Vila Belmiro
 DESCRIPTION:Competição: Copa do Brasil\nFase: Quartas de final\nEstádio:
   Vila Belmiro\nTransmissão: Globo\, SporTV\, Premiere e Amazon Prime\nFon
@@ -132,11 +132,11 @@ DESCRIPTION:Competição: Copa do Brasil\nFase: Quartas de final\nEstádio:
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4688@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260906T213000Z
 DTEND:20260906T233000Z
-SUMMARY:[Brasileirão] Botafogo 0 x 0 Palmeiras
+SUMMARY:⚽ Botafogo 0 x 0 Palmeiras [Brasileirão]
 LOCATION:Nilton Santos
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 26ª rodada\nEs
  tádio: Nilton Santos\nTransmissão: RecordTV\, Premiere e CazéTV\nFonte:
@@ -144,11 +144,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 26ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5148@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260909T220000Z
 DTEND:20260910T000000Z
-SUMMARY:[Libertadores] Palmeiras 1 x 0 LDU-EQU
+SUMMARY:⚽ Palmeiras 1 x 0 LDU-EQU [Libertadores]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Libertadores 2026\nFase: Quartas de final\nEstád
  io: Nubank Parque\nTransmissão: Paramount+\nFonte: https://www.palmeiras.
@@ -156,11 +156,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Quartas de final\nEstád
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4689@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260912T213000Z
 DTEND:20260912T233000Z
-SUMMARY:[Brasileirão] Palmeiras 2 x 0 São Paulo
+SUMMARY:⚽ Palmeiras 2 x 0 São Paulo [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 27ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Premiere\nFonte: https://www.palmeira
@@ -168,11 +168,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 27ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5147@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260916T220000Z
 DTEND:20260917T000000Z
-SUMMARY:[Libertadores] LDU-EQU 3 x 2 Palmeiras
+SUMMARY:⚽ LDU-EQU 3 x 2 Palmeiras [Libertadores]
 LOCATION:Estádio Rodrigo Paz Delgado
 DESCRIPTION:Competição: Libertadores 2026\nFase: Quartas de final\nEstád
  io: Estádio Rodrigo Paz Delgado\nTransmissão: Paramount+\nFonte: https:/
@@ -180,11 +180,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Quartas de final\nEstád
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4690@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20260920T140000Z
 DTEND:20260920T160000Z
-SUMMARY:[Brasileirão] Grêmio 0 x 0 Palmeiras
+SUMMARY:⚽ Grêmio 0 x 0 Palmeiras [Brasileirão]
 LOCATION:Arena do Grêmio
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 28ª rodada\nEs
  tádio: Arena do Grêmio\nTransmissão: Premiere\nFonte: https://www.palme
@@ -192,11 +192,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 28ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4691@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261009T003000Z
 DTEND:20261009T023000Z
-SUMMARY:[Brasileirão] Palmeiras x Bahia
+SUMMARY:⚽ Palmeiras x Bahia [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 29ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Globo\, Premiere e getv\nFonte: https
@@ -204,11 +204,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 29ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4692@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261011T203000Z
 DTEND:20261011T223000Z
-SUMMARY:[Brasileirão] Palmeiras x Corinthians
+SUMMARY:⚽ Palmeiras x Corinthians [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 30ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Globo e Premiere\nFonte: https://www.
@@ -216,11 +216,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 30ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5250@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261015T003000Z
 DTEND:20261015T023000Z
-SUMMARY:[Libertadores] Fluminense x Palmeiras
+SUMMARY:⚽ Fluminense x Palmeiras [Libertadores]
 LOCATION:Maracanã
 DESCRIPTION:Competição: Libertadores 2026\nFase: Semifinal\nEstádio: Mar
  acanã\nTransmissão: Globo\, ge tv e Paramount+\nFonte: https://www.palme
@@ -228,11 +228,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Semifinal\nEstádio: Mar
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4693@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261017T223000Z
 DTEND:20261018T003000Z
-SUMMARY:[Brasileirão] Athletico-PR x Palmeiras
+SUMMARY:⚽ Athletico-PR x Palmeiras [Brasileirão]
 LOCATION:Arena da Baixada
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 31ª rodada\nEs
  tádio: Arena da Baixada\nTransmissão: Amazon Prime\nFonte: https://www.p
@@ -240,11 +240,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 31ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5249@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261022T003000Z
 DTEND:20261022T023000Z
-SUMMARY:[Libertadores] Palmeiras x Fluminense
+SUMMARY:⚽ Palmeiras x Fluminense [Libertadores]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Libertadores 2026\nFase: Semifinal\nEstádio: Nub
  ank Parque\nTransmissão: Globo\, ge tv e Paramount+\nFonte: https://www.p
@@ -252,11 +252,11 @@ DESCRIPTION:Competição: Libertadores 2026\nFase: Semifinal\nEstádio: Nub
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4694@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261024T213000Z
 DTEND:20261024T233000Z
-SUMMARY:[Brasileirão] Palmeiras x Red Bull Bragantino
+SUMMARY:⚽ Palmeiras x Red Bull Bragantino [Brasileirão]
 LOCATION:Arena Crefisa Barueri
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 32ª rodada\nEs
  tádio: Arena Crefisa Barueri\nTransmissão: Premiere\nFonte: https://www.
@@ -264,11 +264,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 32ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4695@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261028T223000Z
 DTEND:20261029T003000Z
-SUMMARY:[Brasileirão] Santos x Palmeiras
+SUMMARY:⚽ Santos x Palmeiras [Brasileirão]
 LOCATION:Vila Belmiro
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 33ª rodada\nEs
  tádio: Vila Belmiro\nTransmissão: Premiere\nFonte: https://www.palmeiras
@@ -276,22 +276,22 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 33ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5237@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261101T190000Z
 DTEND:20261101T210000Z
-SUMMARY:[Copa do Brasil] Palmeiras x Vasco da Gama
+SUMMARY:⚽ Palmeiras x Vasco da Gama [Copa do Brasil]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Copa do Brasil\nFase: Semifinal\nEstádio: Nubank
   Parque\nFonte: https://www.palmeiras.com.br/calendario/
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4696@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261105T223000Z
 DTEND:20261106T003000Z
-SUMMARY:[Brasileirão] Palmeiras x Remo
+SUMMARY:⚽ Palmeiras x Remo [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 34ª rodada\nEs
  tádio: Nubank Parque\nTransmissão: Premiere\nFonte: https://www.palmeira
@@ -299,22 +299,22 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 34ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-5236@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART:20261108T200000Z
 DTEND:20261108T220000Z
-SUMMARY:[Copa do Brasil] Vasco da Gama x Palmeiras
+SUMMARY:⚽ Vasco da Gama x Palmeiras [Copa do Brasil]
 LOCATION:São Januário
 DESCRIPTION:Competição: Copa do Brasil\nFase: Semifinal\nEstádio: São J
  anuário\nFonte: https://www.palmeiras.com.br/calendario/
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4697@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-SUMMARY:[Brasileirão] Cruzeiro x Palmeiras
+SUMMARY:⚽ Cruzeiro x Palmeiras [Brasileirão]
 LOCATION:Mineirão
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 35ª rodada\nEs
  tádio: Mineirão\nHorário ainda não confirmado pela entidade organizado
@@ -322,11 +322,11 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 35ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4698@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
-SUMMARY:[Brasileirão] Palmeiras x Flamengo
+SUMMARY:⚽ Palmeiras x Flamengo [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 36ª rodada\nEs
  tádio: Nubank Parque\nHorário ainda não confirmado pela entidade organi
@@ -334,22 +334,22 @@ DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 36ª rodada\nEs
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4699@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
-SUMMARY:[Brasileirão] Chapecoense x Palmeiras
+SUMMARY:⚽ Chapecoense x Palmeiras [Brasileirão]
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 37ª rodada\nHo
  rário ainda não confirmado pela entidade organizadora.\nFonte: https://w
  ww.palmeiras.com.br/calendario/
 END:VEVENT
 BEGIN:VEVENT
 UID:jogo-4700@calendario-palmeiras.github.io
-DTSTAMP:20261007T185718Z
+DTSTAMP:20261007T202858Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
-SUMMARY:[Brasileirão] Palmeiras x Coritiba
+SUMMARY:⚽ Palmeiras x Coritiba [Brasileirão]
 LOCATION:Nubank Parque
 DESCRIPTION:Competição: Brasileirão Série A 2026\nFase: 38ª rodada\nEs
  tádio: Nubank Parque\nHorário ainda não confirmado pela entidade organi
