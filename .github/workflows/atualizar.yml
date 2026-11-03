@@ -16,25 +16,43 @@ concurrency:
 
 jobs:
   atualizar:
-    runs-on: ubuntu-latest
+    # Desde 26/10/2026 o site do clube recusa os IPs dos runners do GitHub
+    # (HTTP 499 / conexão fechada). Roda no PC do mantenedor, numa conexão
+    # residencial. Se o PC estiver desligado, o job espera na fila (até 24h).
+    runs-on: [self-hosted, Windows, palmeiras]
+    timeout-minutes: 15
+    defaults:
+      run:
+        # o "bash" no PATH dessa máquina é o do WSL; PowerShell é garantido
+        shell: powershell
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      # setup-python exige administrador em runners Windows; usa o Python da
+      # máquina. tzdata: o Windows não tem a base de fusos IANA do zoneinfo.
+      - name: Preparar Python
+        run: |
+          python --version
+          python -m pip install --quiet --disable-pip-version-check tzdata
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Gerar o .ics
-        run: python scripts/gerar_ics.py
+        run: |
+          python scripts/gerar_ics.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Commitar se mudou
         run: |
-          if [ -z "$(git status --porcelain docs)" ]; then
-            echo "Nada mudou."
+          if (-not (git status --porcelain docs)) {
+            Write-Output "Nada mudou."
             exit 0
-          fi
+          }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs
           git commit -m "calendário: atualização automática"
           git push
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

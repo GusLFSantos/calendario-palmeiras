@@ -45,6 +45,18 @@ O script **falha em vez de publicar lixo**. Ele aborta sem gravar nada se:
 
 Nesses casos o workflow fica vermelho e o GitHub manda e-mail — o `.ics` antigo continua no ar, correto, até alguém olhar. Isso é de propósito: um calendário silenciosamente vazio é pior do que um calendário velho.
 
+## Runner self-hosted
+
+Desde 26/10/2026 o site do clube recusa conexões vindas dos runners do GitHub (HTTP 499 ou conexão fechada sem resposta, em todos os meses). A mesma URL responde normalmente de uma conexão residencial, então o workflow `atualizar.yml` roda num runner self-hosted no PC do mantenedor, com os rótulos `self-hosted, Windows, palmeiras`. Os testes continuam nos runners do GitHub.
+
+- Instalado em `C:\Users\Gus\actions-runner`, iniciado por uma tarefa agendada ao fazer login no Windows.
+- Se o PC estiver desligado no horário agendado, o job espera na fila por até 24 horas e roda quando o runner voltar.
+- Logs do runner: `C:\Users\Gus\actions-runner\_diag\`.
+- Requisitos na máquina: Python 3.12 no PATH e Git for Windows. O workflow instala `tzdata` porque o Windows não tem a base de fusos IANA.
+- Repositório público + runner self-hosted: workflows de pull requests vindos de forks exigem aprovação manual (*Settings → Actions → General → Approval for running fork pull request workflows*). Não aprove PR de terceiros que altere `.github/workflows/`.
+
+Para diagnosticar um bloqueio, o log do passo *Gerar o .ics* mostra o resultado de cada mês consultado, e o resumo do run traz uma anotação quando todas as consultas foram recusadas.
+
 ## Manutenção
 
 **O GitHub desativa workflows agendados após ~60 dias sem atividade no repositório, e commits feitos pelo próprio Actions não contam como atividade.** Você recebe um e-mail de aviso antes; basta clicar em *Enable workflow*. Para evitar de vez, troque o `GITHUB_TOKEN` padrão por um PAT seu no passo de commit.

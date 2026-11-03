@@ -1,0 +1,2 @@
+# O .ics usa CRLF (RFC 5545); o git do Windows nao pode converter.
+*.ics -text
