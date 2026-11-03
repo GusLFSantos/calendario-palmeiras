@@ -128,6 +128,49 @@ try:
 except SystemExit as erro:
     checar("dados bons passam", str(erro), "sem erro")
 
+print("\nerros de rede")
+import http.client  # noqa: E402
+import socket  # noqa: E402
+import urllib.error  # noqa: E402
+from email.message import Message  # noqa: E402
+
+cabecalho = Message()
+cabecalho["Server"] = "nginx"
+for descricao, erro, esperado in [
+    ("HTTP 499 e bloqueio", urllib.error.HTTPError("u", 499, "", cabecalho, None), "bloqueio"),
+    ("HTTP 403 e bloqueio", urllib.error.HTTPError("u", 403, "", cabecalho, None), "bloqueio"),
+    ("HTTP 500 nao e bloqueio", urllib.error.HTTPError("u", 500, "", cabecalho, None), "http"),
+    ("conexao fechada sem resposta e bloqueio", http.client.RemoteDisconnected("x"), "bloqueio"),
+    ("reset embrulhado em URLError e bloqueio", urllib.error.URLError(ConnectionResetError()), "bloqueio"),
+    ("DNS falhando e rede", urllib.error.URLError(socket.gaierror(-2, "Name not known")), "rede"),
+    ("JSON quebrado e formato", ValueError("Expecting value"), "formato"),
+]:
+    checar(descricao, g.classificar_erro(erro)[0], esperado)
+
+buscar_original = g.buscar_mes
+
+
+def bloqueado(ano, mes):
+    raise http.client.RemoteDisconnected("Remote end closed connection without response")
+
+
+g.buscar_mes = bloqueado
+try:
+    g.coletar(hoje)
+    checar("todos os meses bloqueados aborta", "nao abortou", "SystemExit")
+except SystemExit:
+    print("  ok  todos os meses bloqueados aborta")
+
+mes_bom = g.meses_da_janela(hoje)[0]
+g.buscar_mes = lambda ano, mes: [{"id": "1", "time_casa": "Palmeiras", "time_visitante": "X",
+                                  "data_jogo": "10/10"}] if (ano, mes) == mes_bom else bloqueado(ano, mes)
+checar("falha parcial segue com o que conseguiu", len(g.coletar(hoje)), 1)
+g.buscar_mes = buscar_original
+
+total = len(g.meses_da_janela(hoje))
+diag = g.diagnosticar([(f"{i:02d}/2026", "bloqueio", "HTTP 499 (Server: nginx)") for i in range(total)], total)
+checar("diagnostico aponta bloqueio quando tudo foi recusado", "bloqueio por IP/WAF" in diag, True)
+
 print()
 if falhas:
     print(f"{len(falhas)} falha(s): " + "; ".join(falhas))

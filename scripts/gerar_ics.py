@@ -21,9 +21,12 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import http.client
 import json
+import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -99,18 +102,72 @@ def buscar_mes(ano: int, mes: int, timeout: int = 30) -> list[dict]:
     return jogos
 
 
+# Codigos que o servidor do clube (nginx/WAF) devolve quando recusa o cliente.
+# Em out/2026 os runners do GitHub passaram a receber 499 ou conexao fechada
+# sem resposta em TODAS as consultas, enquanto a mesma URL respondia 200 de
+# uma conexao residencial: bloqueio por IP, nao defeito do script.
+HTTP_BLOQUEIO = {401, 403, 429, 499, 503}
+
+
+def classificar_erro(erro: BaseException) -> tuple[str, str]:
+    """Devolve (tipo, detalhe). tipo: 'bloqueio', 'http', 'rede' ou 'formato'."""
+    if isinstance(erro, urllib.error.HTTPError):
+        servidor = erro.headers.get("Server", "?") if erro.headers else "?"
+        tipo = "bloqueio" if erro.code in HTTP_BLOQUEIO else "http"
+        return tipo, f"HTTP {erro.code} (Server: {servidor})"
+    if isinstance(erro, (http.client.RemoteDisconnected, ConnectionResetError, ConnectionAbortedError)):
+        return "bloqueio", f"servidor fechou a conexao sem responder ({type(erro).__name__})"
+    if isinstance(erro, (ValueError, http.client.HTTPException)):
+        return "formato", f"{type(erro).__name__}: {erro}"
+    if isinstance(erro, urllib.error.URLError) and isinstance(erro.reason, BaseException):
+        return classificar_erro(erro.reason)  # urllib embrulha resets durante o handshake
+    if isinstance(erro, urllib.error.URLError):
+        return "rede", f"URLError: {erro.reason}"
+    return "rede", f"{type(erro).__name__}: {erro}"
+
+
+def anotar(nivel: str, titulo: str, mensagem: str) -> None:
+    """Imprime no stderr e, dentro do GitHub Actions, vira anotacao no resumo do run."""
+    print(f"{nivel}: {titulo} — {mensagem}", file=sys.stderr)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::{nivel} title={titulo}::{mensagem}")
+
+
+def diagnosticar(falhas: list[tuple[str, str, str]], total: int) -> str:
+    """Resume as falhas da varredura numa frase que diga o que provavelmente houve."""
+    tipos = {tipo for _, tipo, _ in falhas}
+    detalhes = sorted({detalhe for _, _, detalhe in falhas})
+    runner = os.environ.get("RUNNER_ENVIRONMENT", "local")
+    base = f"{len(falhas)} de {total} consultas falharam ({'; '.join(detalhes)}); runner: {runner}"
+    if len(falhas) == total and tipos == {"bloqueio"}:
+        return (f"{base}. O servidor do clube recusou TODAS as consultas: padrao de bloqueio "
+                f"por IP/WAF, nao defeito do script. Confira se a URL responde de outra rede.")
+    if len(falhas) == total and tipos == {"rede"}:
+        return f"{base}. Sem acesso a rede ou ao DNS do site."
+    return base
+
+
 def coletar(hoje: dt.date) -> list[tuple[dict, int]]:
     """Devolve pares (jogo, ano_consultado), sem duplicatas, na ordem da data."""
     vistos: set[str] = set()
     coletados: list[tuple[dict, int]] = []
-    falhas: list[str] = []
+    falhas: list[tuple[str, str, str]] = []  # (mes, tipo, detalhe)
+    janela = meses_da_janela(hoje)
 
-    for ano, mes in meses_da_janela(hoje):
+    print(f"consultando {len(janela)} meses em {API}", file=sys.stderr)
+    for ano, mes in janela:
+        rotulo = f"{mes:02d}/{ano}"
+        inicio = time.monotonic()
         try:
             jogos = buscar_mes(ano, mes)
-        except (urllib.error.URLError, urllib.error.HTTPError, ValueError, TimeoutError) as erro:
-            falhas.append(f"{mes:02d}/{ano}: {erro}")
+        except Exception as erro:  # noqa: BLE001 — classificado e relatado abaixo
+            tipo, detalhe = classificar_erro(erro)
+            falhas.append((rotulo, tipo, detalhe))
+            print(f"  {rotulo}  FALHA [{tipo}] {detalhe} ({time.monotonic() - inicio:.1f}s)",
+                  file=sys.stderr)
             continue
+        print(f"  {rotulo}  ok {sum(map(util, jogos))} jogo(s) ({time.monotonic() - inicio:.1f}s)",
+              file=sys.stderr)
         for jogo in jogos:
             if not util(jogo):
                 continue  # meses sem tabela publicada devolvem um registro vazio
@@ -121,10 +178,12 @@ def coletar(hoje: dt.date) -> list[tuple[dict, int]]:
             coletados.append((jogo, ano))
 
     if falhas:
-        print("avisos na busca:", "; ".join(falhas), file=sys.stderr)
-    # se TODOS os meses falharam, nao ha o que publicar
-    if not coletados and falhas:
-        raise SystemExit("erro: nenhum mes pudo ser lido da API — abortando sem gravar")
+        resumo = diagnosticar(falhas, len(janela))
+        # se TODOS os meses falharam, nao ha o que publicar
+        if not coletados:
+            anotar("error", "API do Palmeiras inacessivel", resumo)
+            raise SystemExit("erro: nenhum mes pode ser lido da API — abortando sem gravar")
+        anotar("warning", "Falha parcial na API", resumo)
     return coletados
 
 
