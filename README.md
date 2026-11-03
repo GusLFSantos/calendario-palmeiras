@@ -49,10 +49,10 @@ Nesses casos o workflow fica vermelho e o GitHub manda e-mail — o `.ics` antig
 
 Desde 26/10/2026 o site do clube recusa conexões vindas dos runners do GitHub (HTTP 499 ou conexão fechada sem resposta, em todos os meses). A mesma URL responde normalmente de uma conexão residencial, então o workflow `atualizar.yml` roda num runner self-hosted no PC do mantenedor, com os rótulos `self-hosted, Windows, palmeiras`. Os testes continuam nos runners do GitHub.
 
-- Instalado em `C:\Users\Gus\actions-runner`, iniciado por uma tarefa agendada ao fazer login no Windows.
+- Instalado em `C:\actions-runner` como serviço do Windows (`actions.runner.GusLFSantos-calendario-palmeiras.pc-gus`), com a conta `NETWORK SERVICE`: inicia com o Windows, sem login, e sem acesso aos arquivos do usuário. Fica fora de `C:\Users\` porque essa conta não lê o perfil do usuário.
 - Se o PC estiver desligado no horário agendado, o job espera na fila por até 24 horas e roda quando o runner voltar.
-- Logs do runner: `C:\Users\Gus\actions-runner\_diag\`.
-- Requisitos na máquina: Python 3.12 no PATH e Git for Windows. O workflow instala `tzdata` porque o Windows não tem a base de fusos IANA.
+- Logs do runner: `C:\actions-runner\_diag\` e o Visualizador de Eventos (*Aplicativo*, origem `ActionsRunnerService`).
+- Requisitos na máquina: Python 3.13 instalado para todos os usuários (`C:\Program Files\Python313`, no PATH do sistema) com `tzdata`, e Git for Windows. O Windows não tem a base de fusos IANA que o `zoneinfo` usa.
 - Repositório público + runner self-hosted: workflows de pull requests vindos de forks exigem aprovação manual (*Settings → Actions → General → Approval for running fork pull request workflows*). Não aprove PR de terceiros que altere `.github/workflows/`.
 
 Para diagnosticar um bloqueio, o log do passo *Gerar o .ics* mostra o resultado de cada mês consultado, e o resumo do run traz uma anotação quando todas as consultas foram recusadas.

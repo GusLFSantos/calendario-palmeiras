@@ -43,13 +43,19 @@ jobs:
       - name: Commitar se mudou
         shell: python
         run: |
-          import subprocess, sys
+          import pathlib, subprocess, sys
 
-          def git(*args):
-              subprocess.run(["git", *args], check=True)
+          # O workspace pode pertencer a outra conta que não a do serviço
+          # (NETWORK SERVICE); sem isso o git recusa com "dubious ownership".
+          BASE = ["git", "-c", f"safe.directory={pathlib.Path.cwd().as_posix()}"]
 
-          mudou = subprocess.run(["git", "status", "--porcelain", "docs"],
-                                 capture_output=True, text=True, check=True).stdout.strip()
+          def git(*args, capturar=False):
+              r = subprocess.run([*BASE, *args], capture_output=capturar, text=True)
+              if r.returncode != 0:
+                  sys.exit(f"git {' '.join(args)} falhou ({r.returncode}): {r.stderr or ''}")
+              return r.stdout
+
+          mudou = git("status", "--porcelain", "docs", capturar=True).strip()
           if not mudou:
               print("Nada mudou.")
               sys.exit(0)
